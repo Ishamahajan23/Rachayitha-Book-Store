@@ -26,20 +26,20 @@ export default function Header() {
     },
   ];
   return (
-    <header class="bg-white shadow-sm">
-      <div class="container mx-auto py-4">
-        <div class="flex  items-center w-full justify-between gap-5">
-          <div class="flex gap-5 w-1/2 items-center space-x-4">
+    <header id="#top" className="bg-white shadow-sm">
+      <div className="container mx-auto py-4">
+        <div className="flex items-center ml-5 md:w-full justify-between gap-5">
+          <div className="flex md:gap-5 md:w-1/2 items-center md:space-x-4">
             <img src="assets/icons/header/image 66.svg" alt="Logo" />
-            <div class="flex w-full items-center space-x-4">
-              <div class="relative w-full">
-                <div class="relative w-full flex items-center h-12 border-2 rounded-full border-grape focus-within:shadow-lg bg-white overflow-hidden">
-                  <div class="grid place-items-center h-full w-12 text-gray-300">
+            <div className="hidden md:flex w-full items-center space-x-4">
+              <div className="relative w-full">
+                <div className="relative w-full flex items-center h-12 border-2 rounded-full border-grape focus-within:shadow-lg bg-white overflow-hidden">
+                  <div className="grid place-items-center h-full w-12 text-gray-300">
                     <img src="assets/icons/header/Vector.svg" alt="Logo" />
                   </div>
 
                   <input
-                    class="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
+                    className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
                     type="text"
                     id="search"
                     placeholder="Search novels, poems and many more.."
@@ -48,12 +48,13 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <div class="flex justify-self-end space-x-4">
-            <div class="flex gap-10">
+          <div className="hidden md:flex justify-self-end space-x-4">
+            <div className="flex gap-10">
               {HeaderLinks.map((link) => (
                 <a
+                  key={link.label}
                   href="#"
-                  class="text-gray-600 flex gap-2 items-center hover:text-purple-600"
+                  className="text-gray-600 flex gap-2 items-center hover:text-purple-600"
                 >
                   <img
                     src={`assets/icons/header/${link.link}`}
@@ -63,14 +64,17 @@ export default function Header() {
                 </a>
               ))}
             </div>
-            <div class="relative">
+            <div className="relative">
               <img
                 src="assets/icons/header/Ellipse 251.svg"
                 alt="User Avatar"
-                class="w-8 h-8 rounded-full border-2 border-gray-200"
+                className="w-8 h-8 rounded-full border-2 border-gray-200"
               />
-              <div class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></div>
+              <div className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></div>
             </div>
+          </div>
+          <div className="md:hidden mx-4">
+            <img src="assets/icons/header/menu-icon.svg" alt="Menu" />
           </div>
         </div>
       </div>
