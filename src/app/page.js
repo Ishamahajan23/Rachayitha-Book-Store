@@ -1,3 +1,4 @@
+import Contest from "@/components/Contest";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hobby from "@/components/Hobby";
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <LeadershipBoard />
       <Hobby />
+      <Contest />
       <Footer />    
     </div>
   );
