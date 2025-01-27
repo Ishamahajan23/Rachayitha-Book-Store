@@ -1,6 +1,6 @@
 export default function Hobby() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:h-screen w-4/5 mx-auto">
+    <div className="flex flex-col md:flex-row items-center justify-center  w-4/5 mx-auto ">
       <div className="w-full md:w-1/2 md:m-auto flex flex-col justify-center items-center md:items-start gap-4">
         <div className="text-3xl md:text-4xl font-600 font-serif text-[#2F2D5C]  text-center md:text-left">
           Pursue <span className="text-grape">Your Hobby</span>,

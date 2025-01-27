@@ -23,20 +23,22 @@ export default function Entries() {
   };
 
   return (
-    <div className=" flex flex-col  gap-3 md:h-screen w-4/5 mx-auto">
-      <div className="font-bold text-4xl text-center md:text-left">Recent Entries</div>
+    <div className=" flex flex-col  gap-3 w-4/5 mx-auto my-10">
+      <div className="font-bold text-4xl text-center md:text-left">
+        Recent Entries
+      </div>
 
       <div className="flex justify-between items-center w-full  gap-2">
         <div className="font-semibold text-lg text-[#2F2D5C]"> Stories</div>
         <div className="underline text-grape"> View All</div>
       </div>
-      <div className="flex justify-center md:justify-between w-full items-start gap-3 flex-wrap ">
+      <div className="flex justify-center md:justify-between w-full h-full items-start  gap-3 flex-wrap ">
         {bookImg.map((item) => (
-          <div className="flex gap-4 h-full flex-grow justify-center items-center border-[1px] p-3 rounded-md border-grape">
+          <div className="flex gap-4 h-full flex-grow shadow-2xl items-stretch border-[1px] p-3 rounded-md border-grape bg-[#dbcbff]">
             <div>
               <img src={item} alt="" className="shadow-2xl" />
             </div>
-            <div className="flex h-full flex-col justify-between items-start gap-4">
+            <div className="flex  flex-col justify-between items-start gap-4">
               <div className="flex flex-col gap-1 ">
                 <div className="bg-grape w-fit rounded-2xl px-4 py-1 text-white text-xs">
                   {book.gerne}
@@ -55,7 +57,7 @@ export default function Entries() {
                 </div>
               </div>
 
-              <div className="text-sm text-[#3E3E3E] flex justify-end">
+              <div className="text-sm text-[#3E3E3E] ">
                 {book.date}
               </div>
             </div>
@@ -69,11 +71,11 @@ export default function Entries() {
       </div>
       <div className="flex justify-center md:justify-between w-full items-start gap-3 flex-wrap">
         {poemImg.map((item) => (
-          <div className="flex gap-4 flex-grow h-full justify-center items-center border-[1px] p-3 rounded-md border-grape">
+          <div className="flex gap-4 flex-grow h-full  items-stretch border-[1px] p-3 rounded-md border-grape bg-[#dbcbff]">
             <div>
               <img src={item} alt="" className="shadow-2xl" />
             </div>
-            <div className="flex h-full flex-col justify-between items-start gap-4">
+            <div className="flex  flex-col justify-between items-start gap-4">
               <div className="flex flex-col gap-1 ">
                 <div className="bg-grape w-fit rounded-2xl px-4 py-1 text-white text-xs">
                   {book.gerne}
@@ -92,7 +94,7 @@ export default function Entries() {
                 </div>
               </div>
 
-              <div className="text-sm text-[#3E3E3E] flex justify-end">
+              <div className="text-xs md:text-sm text-[#3E3E3E] ">
                 {book.date}
               </div>
             </div>
