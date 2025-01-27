@@ -86,7 +86,7 @@ export default function Header() {
           </div>
         </div>
         {isMenuOpen && (
-          <div className="md:hidden bg-white shadow-xl absolute right-0 mt-4">
+          <div className="md:hidden z-10 bg-white shadow-xl absolute right-0 mt-4">
             <div className="flex flex-col items-start justify-start p-5 space-y-4">
               {HeaderLinks.map((link) => (
                 <a

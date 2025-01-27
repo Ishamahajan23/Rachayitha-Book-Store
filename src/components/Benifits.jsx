@@ -7,7 +7,7 @@ export default function Benifits(){
         <div className="font-bold text-2xl md:text-4xl font-sans flex justify-center items-center text-center">
           Benefits of Participating in contest:
         </div>
-        <div className="flex flex-col justify-center items-center gap-2 md:gap-5 w-full md:w-4/5">
+        <div className="flex flex-col justify-center items-center gap-2 md:gap-5 w-11/12 md:w-4/5">
           <div className="flex flex-col md:flex-row justify-between  md:justify-center items:end md:items-center gap-2 w-full md:w-2/3 ">
             <div className="flex justify-start md:justify-center items-start md:items-center gap-3 border-0 shadow-lg  rounded-md pl-10 p-3 md:p-3 ">
               <img src="assets/icons/benifits/certificates.svg" alt="" />
