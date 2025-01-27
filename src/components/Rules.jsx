@@ -23,7 +23,7 @@ export default function Rules(){
                 className=" w-4/5"
               />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col  mx-10 md:mx-0 justify-start md:justify-center items-start gap-7">
+            <div className="w-full md:w-1/2 flex flex-col pl-10 justify-start md:justify-center items-start gap-7">
               <div className="text-xl font-bold font-sans text-[#333333]  w-4/5 md:w-full gap-2">
                 Key Points
               </div>

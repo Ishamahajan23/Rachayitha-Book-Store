@@ -1,57 +1,104 @@
 import { comment } from "postcss";
 
-export default function Entries(){
-    let bookImg = [
-      "assets/images/books/1.svg",
-      "assets/images/books/2.svg",
-      "assets/images/books/3B.svg",
-    ];
-    let poemImg = [
-      "assets/images/books/4B.svg",
-      "assets/images/books/5B.svg",
-      "assets/images/books/6B.svg",
-    ];
-    let book= 
-      {
-        gerne: "Fantacy",
-        title: "Supreme Magus",
-        auther: "by Tarun",
-        likeI: "assets/icons/Entries/like.svg",
-        likeTotal: 450,
-        commentI: "assets/icons/Entries/comment.svg",
-        commentTotal: 44,
-        date: "Aug 14, 2024 | 09:20 AM",
-      };
-    
-    return (
-      <div className=" md:h-screen w-4/5 mx-auto">
-        <div className="font-bold text-4xl text-left">Recent Entries</div>
-        <div className="flex justify-between items-center">
-          <div>Stories</div>
-          <div>View All</div>
-        </div>
+export default function Entries() {
+  let bookImg = [
+    "assets/images/books/1.svg",
+    "assets/images/books/2.svg",
+    "assets/images/books/3B.svg",
+  ];
+  let poemImg = [
+    "assets/images/books/4B.svg",
+    "assets/images/books/5B.svg",
+    "assets/images/books/6B.svg",
+  ];
+  let book = {
+    gerne: "Fantasy",
+    title: "Supreme Magus",
+    auther: "by Tarun",
+    likeI: "assets/icons/Entries/like.svg",
+    likeTotal: 450,
+    commentI: "assets/icons/Entries/comment.svg",
+    commentTotal: 44,
+    date: "Aug 14, 2024 | 09:20 AM",
+  };
+
+  return (
+    <div className=" flex flex-col  gap-3 md:h-screen w-4/5 mx-auto">
+      <div className="font-bold text-4xl text-center md:text-left">Recent Entries</div>
+
+      <div className="flex justify-between items-center w-full  gap-2">
+        <div className="font-semibold text-lg text-[#2F2D5C]"> Stories</div>
+        <div className="underline text-grape"> View All</div>
+      </div>
+      <div className="flex justify-center md:justify-between w-full items-start gap-3 flex-wrap ">
         {bookImg.map((item) => (
-          <div className="flex gap-2 justify-center items-center">
-            <img src={item} alt="" />
+          <div className="flex gap-4 h-full flex-grow justify-center items-center border-[1px] p-3 rounded-md border-grape">
             <div>
-              <div className="">
-                <div>{book.gerne}</div>
+              <img src={item} alt="" className="shadow-2xl" />
+            </div>
+            <div className="flex h-full flex-col justify-between items-start gap-4">
+              <div className="flex flex-col gap-1 ">
+                <div className="bg-grape w-fit rounded-2xl px-4 py-1 text-white text-xs">
+                  {book.gerne}
+                </div>
                 <div>{book.title}</div>
-                <div>{book.auther}</div>
-                <div className=" flex gap-2 justify-center items-center">
+                <div className="text-grape">{book.auther}</div>
+                <div className=" flex gap-2  items-start">
                   <div className="flex gap-2">
                     <img src={book.likeI} alt="" />
-                    <div>{book.likeTotal}</div>
+                    <div className="text-grape">{book.likeTotal}</div>
                   </div>
                   <div className="flex gap-2">
                     <img src={book.commentI} alt="" />
-                    <div>{book.commentTotal}</div>
+                    <div className="text-grape">{book.commentTotal}</div>
                   </div>
                 </div>
+              </div>
+
+              <div className="text-sm text-[#3E3E3E] flex justify-end">
+                {book.date}
               </div>
             </div>
           </div>
         ))}
       </div>
-    );
+
+      <div className="flex justify-between items-center w-full  gap-2">
+        <div className="font-semibold text-lg text-[#2F2D5C]"> Poem</div>
+        <div className="underline text-grape"> View All</div>
+      </div>
+      <div className="flex justify-center md:justify-between w-full items-start gap-3 flex-wrap">
+        {poemImg.map((item) => (
+          <div className="flex gap-4 flex-grow h-full justify-center items-center border-[1px] p-3 rounded-md border-grape">
+            <div>
+              <img src={item} alt="" className="shadow-2xl" />
+            </div>
+            <div className="flex h-full flex-col justify-between items-start gap-4">
+              <div className="flex flex-col gap-1 ">
+                <div className="bg-grape w-fit rounded-2xl px-4 py-1 text-white text-xs">
+                  {book.gerne}
+                </div>
+                <div>{book.title}</div>
+                <div className="text-grape">{book.auther}</div>
+                <div className=" flex gap-2  items-start">
+                  <div className="flex gap-2">
+                    <img src={book.likeI} alt="" />
+                    <div className="text-grape">{book.likeTotal}</div>
+                  </div>
+                  <div className="flex gap-2">
+                    <img src={book.commentI} alt="" />
+                    <div className="text-grape">{book.commentTotal}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-sm text-[#3E3E3E] flex justify-end">
+                {book.date}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
