@@ -23,7 +23,7 @@ export default function Entries() {
   };
 
   return (
-    <div className=" flex flex-col  gap-3 w-4/5 mx-auto my-10">
+    <div className=" flex flex-col  gap-3 md:h-screen w-4/5 mx-auto my-10">
       <div className="font-bold text-4xl text-center md:text-left">
         Recent Entries
       </div>
