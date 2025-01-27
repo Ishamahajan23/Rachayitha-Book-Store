@@ -1,4 +1,9 @@
+"use client";
+import { useState } from "react";
+
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const HeaderLinks = [
     {
       label: "Explore",
@@ -25,9 +30,10 @@ export default function Header() {
       link: "Frame 2273.svg",
     },
   ];
+
   return (
     <header id="#top" className="bg-white shadow-sm">
-      <div className="container mx-auto py-4">
+      <div className="relative container mx-auto py-4">
         <div className="flex items-center ml-5 md:w-full justify-between gap-5">
           <div className="flex md:gap-5 md:w-1/2 items-center md:space-x-4">
             <img src="assets/icons/header/image 66.svg" alt="Logo" />
@@ -74,9 +80,47 @@ export default function Header() {
             </div>
           </div>
           <div className="md:hidden mx-4">
-            <img src="assets/icons/header/menu-icon.svg" alt="Menu" />
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <img src="assets/icons/header/menu-icon.svg" alt="Menu" />
+            </button>
+          </div>
+          <div className="hidden md:block mt-4">
+            <div className="flex flex-col space-y-4">
+              {HeaderLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href="#"
+                  className="text-gray-600 flex gap-2 items-center hover:text-purple-600"
+                >
+                  <img
+                    src={`assets/icons/header/${link.link}`}
+                    alt={link.label}
+                  />
+                  <div>{link.label}</div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
+        {isMenuOpen && (
+          <div className="md:hidden bg-white shadow-xl absolute right-0 mt-4">
+            <div className="flex flex-col items-start justify-start p-5 space-y-4">
+              {HeaderLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href="#"
+                  className="text-gray-600 flex gap-2 items-center hover:text-purple-600"
+                >
+                  <img
+                    src={`assets/icons/header/${link.link}`}
+                    alt={link.label}
+                  />
+                  <div>{link.label}</div>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
