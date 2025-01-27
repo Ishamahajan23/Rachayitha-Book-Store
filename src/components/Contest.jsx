@@ -29,7 +29,7 @@ export default function Contest() {
         </div>
       </div>
 
-      <div className="flex relative flex-col-reverse md:flex-row justify-end md:h-screen w-full">
+      <div className="flex relative flex-col-reverse md:flex-row justify-end md:h-screen w-full gap-2">
         <div className="w-full md:absolute left-0 md:w-1/2">
           <img
             src="assets/images/other/contest.svg"
@@ -41,9 +41,9 @@ export default function Contest() {
           <div className="text-2xl font-bold font-sans text-[#333333] mx-auto w-4/5 md:w-full gap-2">
             Submit Your <span className="text-grape">Work</span>
           </div>
-          <div className="flex pl-10 flex-col justify-center items-center w-4/5 gap-5">
+          <div className="flex  flex-col justify-center items-center  gap-5">
             {work.map((item) => (
-              <div className="flex justify-center items-center gap-4 ">
+              <div className="flex justify-center items-center gap-4 w-4/5">
                 <img src={item.icon} alt="" />
                 <div>
                   <div className="font-bold">{item.title}</div>

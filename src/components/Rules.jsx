@@ -10,7 +10,7 @@ export default function Rules(){
       ];
 
       return (
-        <div className="flex flex-col items-center justify-center md:h-screen w-full  gap-10 md:gap-0">
+        <div className="flex flex-col items-center justify-center md:h-screen w-full  gap-10 md:gap-0 ">
           <div className="font-bold text-2xl md:text-4xl font-sans flex justify-center items-center ">
             Rules and Guidelines
           </div>
