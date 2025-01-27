@@ -34,7 +34,7 @@ export default function Entries() {
       </div>
       <div className="flex justify-center md:justify-between w-full h-full items-start  gap-3 flex-wrap ">
         {bookImg.map((item) => (
-          <div className="flex gap-4 h-full flex-grow shadow-2xl items-stretch border-[1px] p-3 rounded-md border-grape bg-[#dbcbff]">
+          <div className="flex hover:cursor-pointer gap-4 h-full flex-grow hover:shadow-2xl items-stretch border-[1px] p-3 rounded-lg border-grape bg-[#F7F3FF]">
             <div>
               <img src={item} alt="" className="shadow-2xl" />
             </div>
@@ -71,7 +71,7 @@ export default function Entries() {
       </div>
       <div className="flex justify-center md:justify-between w-full items-start gap-3 flex-wrap">
         {poemImg.map((item) => (
-          <div className="flex gap-4 flex-grow h-full  items-stretch border-[1px] p-3 rounded-md border-grape bg-[#dbcbff]">
+          <div className="flex gap-4 hover:cursor-pointer flex-grow h-full hover:shadow-2xl  items-stretch border-[1px] p-3 rounded-lg border-grape bg-[#F7F3FF]">
             <div>
               <img src={item} alt="" className="shadow-2xl" />
             </div>
