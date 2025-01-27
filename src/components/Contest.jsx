@@ -17,11 +17,13 @@ export default function Contest() {
   return (
     <div className="flex flex-col items-center justify-center md:h-screen w-full mx-auto gap-10 md:gap-0">
       <div className="w-5/6 md:w-1/2 flex flex-col justify-center items-center gap-2 md:gap-4">
-        <div className="font-bold text-xl md:text-2xl font-sans">How to Win </div>
+        <div className="font-bold text-xl md:text-2xl font-sans">
+          How to Win{" "}
+        </div>
         <div className="font-bold text-2xl md:text-4xl font-sans flex gap-2 md:gap-4">
           Join the contest <img src="assets/images/other/trophy.svg" alt="" />
         </div>
-        <div className=" font-thin md:font-normal font-sans text-center">
+        <div className=" font-thin md:font-normal font-sans text-center text-[#666666]">
           The best way is by writing and sharing your creative pieces—stories,
           poems, or shayaris—and joining our Literary Ambassador Program.
         </div>
@@ -44,9 +46,9 @@ export default function Contest() {
               <div className="flex justify-center items-center gap-4 ">
                 <img src={item.icon} alt="" />
                 <div>
-                  <div className="font-bold" >{item.title}</div>
+                  <div className="font-bold">{item.title}</div>
 
-                  <div >{item.description}</div>
+                  <div className="text-[#666666]">{item.description}</div>
                 </div>
               </div>
             ))}
