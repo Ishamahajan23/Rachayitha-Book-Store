@@ -84,23 +84,6 @@ export default function Header() {
               <img src="assets/icons/header/menu-icon.svg" alt="Menu" />
             </button>
           </div>
-          <div className="hidden md:block mt-4">
-            <div className="flex flex-col space-y-4">
-              {HeaderLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href="#"
-                  className="text-gray-600 flex gap-2 items-center hover:text-purple-600"
-                >
-                  <img
-                    src={`assets/icons/header/${link.link}`}
-                    alt={link.label}
-                  />
-                  <div>{link.label}</div>
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
         {isMenuOpen && (
           <div className="md:hidden bg-white shadow-xl absolute right-0 mt-4">
