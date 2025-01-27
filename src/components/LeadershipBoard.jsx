@@ -1,3 +1,4 @@
+"use client";
 export default function LeadershipBoard() {
   const leaderboardData = [
     {
@@ -107,21 +108,7 @@ export default function LeadershipBoard() {
                 <h2 className="text-xl md:text-2xl text-left font-bold text-grape">
                   Novel Writing Competition
                 </h2>
-                <svg
-                  width="20"
-                  height="11"
-                  viewBox="0 0 20 11"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 1.66666L10 9.66666L2 1.66666H18Z"
-                    fill="#5624C1"
-                    stroke="#5624C1"
-                    stroke-width="2.66667"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <img src="assets/icons/leadership/dropdown.svg" />
               </button>
               <div className="text-white text-lg md:text-xl font-medium">
                 <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
@@ -158,7 +145,7 @@ export default function LeadershipBoard() {
         <div className="flex text-[7px] md:text-lg my-10 flex-col gap-6 shadow-md">
           {leaderboardData.map((entry) => (
             <div
-              key={entry.name}
+              key={entry.rank}
               className="flex items-center bg-black bg-opacity-20 shadow-xl backdrop-blur-sm justify-between p-4 rounded-xl"
             >
               <div className="flex items-center justify-center gap-4">
@@ -179,9 +166,7 @@ export default function LeadershipBoard() {
                 <img className="w-8 h-8 md:w-12 md:h-12" src={entry.avatar} />
                 <div className="flex flex-col">
                   <span className="text-white font-semibold">{entry.name}</span>
-                  <span className="text-white/60">
-                    {entry.location}
-                  </span>
+                  <span className="text-white/60">{entry.location}</span>
                 </div>
               </div>
               <div className="flex items-center gap-2 md:gap-6">
