@@ -1,5 +1,6 @@
 import Benifits from "@/components/Benifits";
 import Contest from "@/components/Contest";
+import Entries from "@/components/Entries";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hobby from "@/components/Hobby";
@@ -11,6 +12,7 @@ export default function Home() {
     <div>
       <Header />
       <LeadershipBoard />
+      <Entries />
       <Hobby />
       <Contest />
       <Rules />
