@@ -135,7 +135,7 @@ export default function LeadershipBoard() {
           <img src="/assets/icons/leaderboard/leaderboard-banner.svg" />
         </div>
       </div>
-      <div className="w-full p-2 md:p-0 md:w-4/5 -md:mt-20 pb-96 mx-auto">
+      <div className="w-full p-2 md:p-0 md:w-4/5 -md:mt-20 pb-40 md:pb-96 mx-auto">
         <div className="flex flex-col md:flex-row justify-start items-start md:items-center gap-2">
           <div className="text-white w-full md:w-fit text-3xl md:text-4xl text-bold">
             Engagement Leaderboard
