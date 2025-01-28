@@ -108,7 +108,7 @@ export default function LeadershipBoard() {
                 <h2 className="text-xl md:text-2xl text-left font-bold text-grape">
                   Novel Writing Competition
                 </h2>
-                <img src="assets/icons/leadership/dropdown.svg" />
+                <img src="/assets/icons/leaderboard/dropdown.svg" />
               </button>
               <div className="text-white text-lg md:text-xl font-medium">
                 <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
@@ -130,7 +130,7 @@ export default function LeadershipBoard() {
           <div className="relative w-full md:w-1/3">
             <div className="relative w-full flex items-center h-12 border-2 rounded-lg border-grape focus-within:shadow-lg bg-white overflow-hidden">
               <div className="grid place-items-center h-full w-12 text-gray-300">
-                <img src="assets/icons/header/Vector.svg" alt="Logo" />
+                <img src="/assets/icons/header/Vector.svg" alt="Logo" />
               </div>
 
               <input
